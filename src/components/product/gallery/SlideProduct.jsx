@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 export default ({
   ARRAY_IMGS = [],
-  ARRAY_IMGS_SMALL = [],
+  ARRAY_IMG_SMALL = [],
   isOpenModal = false,
   handleCloseModal = null,
   handleOpenModal = () => {},
@@ -38,7 +38,7 @@ export default ({
         <img
           src={ARRAY_IMGS[index]}
           alt=""
-          className="md:aspect[16/18] aspect-[16/13] w-full md:cursor-pointer md:rounded-md"
+          className="aspect-[16/13] w-full object-cover md:aspect-[16/18] md:cursor-pointer md:rounded-md xl:aspect-[16/16] 2xl:max-h-[500px]"
           onClick={handleOpenModal}
         />
         <div
@@ -62,7 +62,7 @@ export default ({
         </div>
       </div>
 
-      {ARRAY_IMGS_SMALL.map((smallImg, i) => (
+      {ARRAY_IMG_SMALL.map((smallImg, i) => (
         <div
           key={i}
           onClick={() => {

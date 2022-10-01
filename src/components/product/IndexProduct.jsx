@@ -1,5 +1,5 @@
-import DetailsProduct from "@/components//product/col-details/DetailsProduct";
-import MainImages from "@/components/product/col-images/MainImages";
+import DetailsProduct from "@/components//product/details/DetailsProduct";
+import GalleryProduct from "@/components/product/gallery/GalleryProduct ";
 
 import imgProduct1 from "@/assets/images/image-product-1.jpg";
 import imgProduct2 from "@/assets/images/image-product-2.jpg";
@@ -13,7 +13,7 @@ import imgProductSmall4 from "@/assets/images/image-product-4-thumbnail.jpg";
 
 const ARRAY_IMGS = [imgProduct1, imgProduct2, imgProduct3, imgProduct4];
 
-const ARRAY_IMGS_SMALL = [
+const ARRAY_IMG_SMALL = [
   imgProductSmall1,
   imgProductSmall2,
   imgProductSmall3,
@@ -23,10 +23,10 @@ const ARRAY_IMGS_SMALL = [
 const MainProduct = () => {
   return (
     <>
-      <main className="md:grid-2  grid grid-cols-1 gap-8 md:container md:min-h-[calc(100vh-88px-3px)] md:grid-cols-2">
-        <MainImages
+      <main className="grid grid-cols-1 gap-8 md:container md:mx-auto md:min-h-[calc(100vh-88px-3px)] md:grid-cols-2 md:items-center">
+        <GalleryProduct
           ARRAY_IMGS={ARRAY_IMGS}
-          ARRAY_IMGS_SMALL={ARRAY_IMGS_SMALL}
+          ARRAY_IMGS_SMALL={ARRAY_IMG_SMALL}
         />
         <DetailsProduct />
       </main>
